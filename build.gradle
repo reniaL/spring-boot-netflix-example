@@ -5,10 +5,7 @@ apply plugin: "io.spring.dependency-management"
 buildscript {
     repositories {
         mavenLocal()
-        mavenCentral()
-        jcenter()
-        maven { url "http://repo.spring.io/release" }
-        maven { url "https://repo.spring.io/libs-milestone" }
+	    maven { url "http://local.nexus.com:3001/nexus/content/groups/public/" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${theSpringBootVersion}")
@@ -17,11 +14,8 @@ buildscript {
 }
 
 repositories {
-    mavenLocal()
-    mavenCentral()
-    jcenter()
-    maven { url "http://repo.spring.io/release" }
-    maven { url "https://repo.spring.io/libs-milestone" }
+        mavenLocal()
+	    maven { url "http://local.nexus.com:3001/nexus/content/groups/public/" }
 }
 
 
@@ -45,10 +39,7 @@ subprojects {
 
     repositories {
         mavenLocal()
-        mavenCentral()
-        jcenter()
-        maven { url "http://repo.spring.io/release" }
-        maven { url "https://repo.spring.io/libs-milestone" }
+	    maven { url "http://local.nexus.com:3001/nexus/content/groups/public/" }
     }
 }
 
