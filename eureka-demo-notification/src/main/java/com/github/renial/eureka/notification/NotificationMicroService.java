@@ -1,4 +1,4 @@
-package com.deswaef.netflixexamples.notifications;
+package com.github.renial.eureka.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
