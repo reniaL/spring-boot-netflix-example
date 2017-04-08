@@ -64,3 +64,9 @@ crashlytics-build.properties
 # Created by .ignore support plugin (hsz.mobi)
 notification-micro-service.pid
 /.gradle/
+
+# Eclipse
+/bin/
+.classpath
+.project
+.settings
