@@ -1,4 +1,4 @@
-rootProject.name = theName
+rootProject.name = eureka-demo
 
-include 'eureka-server'
-include 'notifications-service'
+include 'eureka-demo-server'
+include 'eureka-demo-notification'

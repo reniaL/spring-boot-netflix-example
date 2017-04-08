@@ -1,4 +1,6 @@
-/eureka-server/eureka-server.pid
+server.pid
+notification.pid
+
 ### Java template
 *.class
 

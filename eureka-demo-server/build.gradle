@@ -2,7 +2,7 @@ apply plugin: 'spring-boot'
 apply plugin: "io.spring.dependency-management"
 
 jar {
-    baseName = 'eureka-server'
+    baseName = 'eureka-demo-server'
     version = theVersion
 }
 

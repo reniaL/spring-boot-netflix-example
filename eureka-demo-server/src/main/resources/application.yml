@@ -8,7 +8,7 @@ error:
 
 spring:
   application:
-    name: eureka-server
+    name: eureka-demo-server
 
 #Eureka Specifics
 
