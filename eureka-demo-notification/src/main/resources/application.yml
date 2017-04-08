@@ -1,13 +1,13 @@
 server:
-  port: 9000
+  port: 9110
 
 spring:
   application:
-    name: notification-service
+    name: eureka-demo-notification
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:9100/eureka/
   instance:
     preferIpAddress: true

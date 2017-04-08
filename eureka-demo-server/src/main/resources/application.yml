@@ -1,6 +1,6 @@
 #Server Specifics
 server:
-  port: 8761
+  port: 9100
 
 error:
     whitelabel:

@@ -13,7 +13,7 @@ public class NotificationMicroService {
 
     public static void main(String[] args) {
         SpringApplication notificationMicroService = new SpringApplication(NotificationMicroService.class);
-        notificationMicroService.addListeners(new ApplicationPidFileWriter("notification-micro-service.pid"));
+        notificationMicroService.addListeners(new ApplicationPidFileWriter("notification.pid"));
         notificationMicroService.run(args);
     }
 }
