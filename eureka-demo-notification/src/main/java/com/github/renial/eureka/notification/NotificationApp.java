@@ -9,11 +9,11 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @EnableAsync
 @EnableEurekaClient //or @EnableDiscoveryClient
-public class NotificationMicroService {
+public class NotificationApp {
 
     public static void main(String[] args) {
-        SpringApplication notificationMicroService = new SpringApplication(NotificationMicroService.class);
-        notificationMicroService.addListeners(new ApplicationPidFileWriter("notification.pid"));
-        notificationMicroService.run(args);
+        SpringApplication app = new SpringApplication(NotificationApp.class);
+        app.addListeners(new ApplicationPidFileWriter("notification.pid"));
+        app.run(args);
     }
 }
