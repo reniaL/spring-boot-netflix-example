@@ -1,0 +1,27 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: "io.spring.dependency-management"
+
+jar {
+    baseName = 'eureka-demo-user'
+    version = theVersion
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:${theSpringCloudVersion}'
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
+    compile 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard'
+    compile 'org.springframework.cloud:spring-cloud-starter-feign'
+}
+
+bootRun {
+    systemProperties System.properties
+}

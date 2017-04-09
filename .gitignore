@@ -1,5 +1,6 @@
 server.pid
 notification.pid
+user.pid
 
 ### Java template
 *.class

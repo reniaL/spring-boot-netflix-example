@@ -5,9 +5,13 @@ spring:
   application:
     name: eureka-demo-notification
 
+management:
+    security:
+        enabled: false
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9100/eureka/
-//  instance:
-//    preferIpAddress: true
+      defaultZone: http://localhost:9100/eureka/      
+  instance:
+    preferIpAddress: true

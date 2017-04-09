@@ -2,3 +2,4 @@ rootProject.name = theName
 
 include 'eureka-demo-server'
 include 'eureka-demo-notification'
+include 'eureka-demo-user'

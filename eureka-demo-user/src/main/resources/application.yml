@@ -1,0 +1,17 @@
+server:
+  port: 9120
+
+spring:
+  application:
+    name: eureka-demo-user
+
+management:
+    security:
+        enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9100/eureka/      
+  instance:
+    preferIpAddress: true
