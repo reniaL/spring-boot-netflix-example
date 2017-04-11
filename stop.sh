@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-kill $(cat notifications-service/notification-micro-service.pid)
-kill $(cat eureka-server/eureka-server.pid)
+kill $(cat eureka-demo-notification/notification.pid)
+kill $(cat eureka-demo-user/user.pid)
+kill $(cat eureka-demo-server/server.pid)
