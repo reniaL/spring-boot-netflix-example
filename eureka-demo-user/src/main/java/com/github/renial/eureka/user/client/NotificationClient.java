@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.github.renial.eureka.user.model.Notification;
 
@@ -14,5 +15,8 @@ public interface NotificationClient {
 
 	@RequestMapping(value = "/notification/getAll", method = GET)
 	List<Notification> getAll();
+
+	@RequestMapping(value = "/notification/getOne", method = GET)
+	Notification getOne(@RequestParam("id") Integer id);
 
 }

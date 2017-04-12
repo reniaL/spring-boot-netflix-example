@@ -20,6 +20,11 @@ public class NotificationController {
 		return ResponseEntity.ok("success");
 	}
 
+	@RequestMapping("/getOne")
+	public Object getOne(Integer id) {
+		return notificationService.getOne(id);
+	}
+
 	@RequestMapping("/getAll")
 	public Object getAll() {
 		return notificationService.getAll();

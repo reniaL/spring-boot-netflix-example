@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class Notification {
 
-	private String id;
+	private Integer id;
 	private Date time;
 
 	public Notification() {
 		super();
 	}
 
-	public Notification(String id, Date time) {
+	public Notification(Integer id, Date time) {
 		super();
 		this.id = id;
 		this.time = time;
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
