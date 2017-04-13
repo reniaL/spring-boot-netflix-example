@@ -15,12 +15,12 @@ public class NotificationService {
 	@Autowired
 	private NotificationClient notificationClient;
 	
-	public Notification getOne(Integer id) {
-		return notificationClient.getOne(id);
+	public Notification getOne(Integer id, Boolean wait) {
+		return notificationClient.getOne(id, wait);
 	}
 	
-	public List<Notification> getList(List<Integer> ids) {
-		return ids.stream().map(id -> notificationClient.getOne(id)).collect(Collectors.toList());
+	public List<Notification> getList(List<Integer> ids, Boolean wait) {
+		return ids.stream().map(id -> notificationClient.getOne(id, wait)).collect(Collectors.toList());
 	}
 	
 	public List<Notification> getAll() {

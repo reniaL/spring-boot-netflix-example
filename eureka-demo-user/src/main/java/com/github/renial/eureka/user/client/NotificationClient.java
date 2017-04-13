@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.github.renial.eureka.user.model.Notification;
 
-@FeignClient("http://eureka-demo-notification")
+@FeignClient(value = "http://eureka-demo-notification", fallback = NotificationClientFallback.class)
 public interface NotificationClient {
-
+	
 	@RequestMapping(value = "/notification/getAll", method = GET)
 	List<Notification> getAll();
-
+	
 	@RequestMapping(value = "/notification/getOne", method = GET)
-	Notification getOne(@RequestParam("id") Integer id);
-
+	Notification getOne(@RequestParam("id") Integer id, @RequestParam("wait") Boolean wait);
+	
 }

@@ -9,9 +9,26 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9100/eureka/
+    healthcheck:
+      enabled: true
   instance:
     hostname: localhost
     instanceId: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+    lease-expiration-duration-in-seconds: 30 
+    lease-renewal-interval-in-seconds: 10
+
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        requestVolumeThreshold: 5
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 3000
+#      metrics:
+#        rollingStats:
+#          timeInMilliseconds: 20000
 
 management:
   security:

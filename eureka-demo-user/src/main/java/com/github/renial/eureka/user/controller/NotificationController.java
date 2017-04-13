@@ -17,14 +17,14 @@ public class NotificationController {
 	private NotificationService notificationService;
 	
 	@RequestMapping("/getOne")
-	public Object getOneNotifications(Integer id) {
-		return notificationService.getOne(id);
+	public Object getOneNotifications(Integer id, Boolean wait) {
+		return notificationService.getOne(id, wait);
 	}
 	
 	@RequestMapping("/getList")
-	public Object getNotificationList(String ids) {
-		return notificationService.getList(Arrays.stream(ids.split(",")).map(Integer::parseInt)
-				.collect(Collectors.toList()));
+	public Object getNotificationList(String ids, Boolean wait) {
+		return notificationService.getList(
+				Arrays.stream(ids.split(",")).map(Integer::parseInt).collect(Collectors.toList()), wait);
 	}
 	
 	@RequestMapping("/getAll")
