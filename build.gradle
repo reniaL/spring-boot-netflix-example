@@ -1,5 +1,5 @@
 apply plugin: 'java'
-apply plugin: "io.spring.dependency-management"
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'eclipse'
 
 buildscript {
@@ -8,7 +8,7 @@ buildscript {
         maven { url "http://local.nexus.com:3001/nexus/content/groups/public/" }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${theSpringBootVersion}")
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${theSpringBootVersion}"
         classpath "io.spring.gradle:dependency-management-plugin:${theDependencyManagementPlugin}"
     }
 }
@@ -32,7 +32,7 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom("org.springframework.boot:spring-boot-dependencies:${theSpringBootVersion}")
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${theSpringBootVersion}"
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${theSpringCloudVersion}"
         }
     }
@@ -44,7 +44,7 @@ subprojects {
 }
 
 allprojects {
-    apply plugin: "java"
+    apply plugin: 'java'
     apply plugin: 'eclipse'
 
     version = theVersion
