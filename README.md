@@ -1,3 +1,7 @@
-#Spring Boot Netflix Examples - Part 1 - Eureka
+# Spring Cloud Netflix Demo
 
-> This is a repository accompanying the blogpost posted at https://blog.de-swaef.eu/the-netflix-stack-using-spring-boot/
+Branches:
+
+* part1_eureka: Very simple Eureka server and client.
+* feign: Feign and Ribbon for load-balanced REST client.
+* hystrix: Circuit breaker and hystrix dashboard.
